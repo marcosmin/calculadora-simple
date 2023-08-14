@@ -1,0 +1,263 @@
+
+/*BORDE CONTENEDOR*/
+.borde-contenedor {
+    position: fixed;
+    align-items:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* estilo*/
+    width: 30%;
+    border: 0.3px solid #000;
+    border-radius: 20px;
+    min-width: 460px;
+}
+
+/*MARGIN AL CONTENEDOR DE LOS ELEMENTOS DE LA CALCULADORA*/
+.contenedor {
+    margin: 25px;
+}
+
+/*DISPLAY DE LA CALCULADORA*/
+.display {
+    display: flex;
+    align-items:center;
+    justify-content:flex-end;
+    /*---------------------*/
+    border-radius: 12px 12px 0px 0px;
+    background: #2B2B2B;
+    height: 180px;
+}
+
+/*CONTENEDORES DE LOS INPUTS*/
+.operando1input, .operando2input {
+    display: flex;
+}
+
+/*CONTENEDOR DE LOS BOTONES LIMPIAR E IGUAL*/
+.container-fin {
+    display: flex;
+}
+
+
+/*--------------------------------------------------*/
+
+
+/*MENU DESPLEGABLE CON LAS OPERACIONES MATEMATICAS*/
+select {
+
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    outline: 0;
+    background: #2ecc71;
+    color: #000000;
+    font-size: 29px;
+    text-align: center;
+    border: none;
+    height: 60px;
+}
+
+/*TEXTO DEL DISPLAY*/
+.display-font {
+    color: #FFF;
+    text-align: right;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 68px;
+    line-height: 65px;
+    margin-right: 20px;
+}
+
+
+/*TEXTO DE LOS INPUTS*/
+.input1-font, .input2-font {
+    color: #000;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 68px;
+    width: 100%;
+    border: none;
+}
+
+/*SACAR FLECHITAS INCREMENTO/DECREMENTO DEL INPUT NUMBER*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin-right: 20px;
+}
+
+/*LINEA SEPARADORA ENTRE INPUTS*/
+.hr-entre-input {
+    margin: 0px;
+    border-width: 0.1;
+}
+
+/*TEXTO LIMPIAR*/
+.limpiar-font {
+    color: #FFF;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 29px;
+    border: none;
+    border-radius: 0px 0px 0px 12px;
+    background: #565656;
+    width: 50%;
+}
+
+/*TEXTO LIMPIAR :HOVER*/
+.limpiar-font:hover {
+    background: #8446ff;
+}
+
+/*TEXTO LIMPIAR :ACTIVE*/
+.limpiar-font:active {
+    background: #2B2B2B;
+}
+
+/*TEXTO IGUAL*/
+.igual-font {
+    color: #FFF;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 85px;
+    height: 100%;
+    border: none;
+    border-radius: 0px 0px 12px 0px;
+    background: #F87328;
+    width: 50%;
+}
+
+/*TEXTO LIMPIAR :HOVER*/
+.igual-font:hover {
+    background: #8446ff;;
+}
+
+/*TEXTO LIMPIAR :ACTIVE*/
+.igual-font:active {
+    background: #e15605;;
+}
+
+/*CONTENEDOR FOOTER*/
+.footer {
+    text-align: center;
+    color: rgb(132, 132, 132);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/*--------------------------------------------------*/
+
+
+/*CONTENEDOR SWITCH MODO OSCURO*/
+.modo-oscuro {
+    display: flex;
+    justify-content:center;
+    margin: 50px 0px 50px 0px;
+}
+
+/*ATRIBUTOS PARA TEMA DARK*/
+:root {
+    --color-fuente: #ffffff;
+    --color-fondo: #111111;
+    --fondo-input: #2B2B2B;
+    --color-border: 0.1px solid #ffffff;
+    --fondo-display: #2B2B2B;
+    --fuente-display: #f3f3f3;
+}
+
+/*ATRIBUTOS PARA TEMA LIGHT*/
+[tema="light"]{
+    --color-fuente: #000;
+    --color-fondo: rgb(208, 208, 208);
+    --fondo-input: #f3f3f3;
+    --color-border: 0.2px solid #000;
+    --fondo-display: #f3f3f3;
+    --fuente-display: #2B2B2B;
+}
+
+/*SWITCH DEL BORDE CONTENEDOR*/
+.borde-contenedor {
+border: var(--color-border);
+}
+
+/*SWITCH DE LOS INPUT*/
+.input1-font, .input2-font, .operando1-font, .operando2-font {
+    background-color: var(--fondo-input);
+    color: var(--color-fuente);
+}
+
+/*SWITCH DEL FONDO*/
+body {
+  background-color:var(--color-fondo);
+}
+
+/*SWITCH DEL FONDO DEL DISPLAY*/
+.display {
+    background-color:var(--fondo-display);
+}
+
+/*SWITCH DEL NUMERO DEL DISPLAY*/
+.display-font {
+    color:var(--fuente-display)
+}
+
+/*BOTÓN SWITCH MODO OSCURO*/
+#switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/*ESCONDER CHECKED*/
+#switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*SLIDER SWITCH*/
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--color-fuente);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/*SLIDER SWITCH BOLITA*/
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color:var(--color-fondo);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/*SLIDER SWITCH TRANSICION*/
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/*SLIDER SWITCH REDONDEO DE BORDES*/
+.slider.round {
+    border-radius: 34px;
+}
+
+/*SLIDER SWITCH REDONDEO DE BORDES BOLITA*/
+.slider.round:before {
+    border-radius: 50%;
+}

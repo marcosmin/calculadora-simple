@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--HEAD-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!--FAVICON-->
+    <link rel="icon" href="./imagenes/icon.png">
+
+    <title>Calculadora Simple</title>
+</head>
+
+<!--BODY-->
+<body>
+    
+    <!--SWITCH MODO OSCURO-->
+    <div class="modo-oscuro">
+        <label id="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    
+    <!--BORDE CONTENEDOR-->
+    <div class="borde-contenedor">
+
+        <!--CONTENEDOR DE LOS ELEMENTOS DE LA CALCULADORA-->
+        <div class="contenedor">
+            
+            <!--DISPLAY DE LA CALCULADORA-->
+            <div class="display">
+                <p class="display-font" id="resultado">0</p>
+            </div>
+            
+            <!--MENU DESPLEGABLE CON LAS OPERACIONES MATEMATICAS-->
+            <div class="select">
+                <select id="operador-select">
+                    <option value=""disabled selected>SELECCIONAR OPERADOR</option>
+                    <option value="suma">+ + + + + + SUMA + + + + + +</option>
+                    <option value="resta">- - - - - - - - RESTA - - - - - - - -</option>
+                    <option value="multiplicacion">x x x MULTIPLICACIÓN x x x</option>
+                    <option value="division">/ / / / / / / / DIVISIÓN / / / / / / / /</option>
+                    <option value="modulo">% % % MÓDULO % % %</option>
+                </select>
+            </div>
+            
+            <!--INPUT PARA INGRESAR EL PRIMER NUMERO-->
+            <div class="operando1input">
+                <input type="number" id= "op1" class="input1-font" placeholder="0" value="">
+            </div>
+            
+            <!--LINEA SEPARADORA-->
+            <hr class="hr-entre-input">
+            
+            <!--INPUT PARA INGRESAR EL SEGUNDO NUMERO-->
+            <div class="operando2input">
+                <input type="number" id= "op2" class="input2-font" placeholder="0" value="">
+            </div>
+            
+            <!--CONTENEDOR DE LOS BOTONES LIMPIAR E IGUAL-->
+            <div class="container-fin">
+                <button onclick="limpiar()" class="limpiar-font">LIMPIAR</button>
+                <button onclick="calcular()" class="igual-font">=</button>      
+            </div>
+
+        </div>
+
+    </div>
+                
+    <!--FOOTER CON INFO DEL CURSO-->
+    <footer class="footer">
+        <p><strong>Argentina Programa | FAMAF - UNC</strong> | 2023</p>
+    </footer>
+    
+    <!--JS-->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
